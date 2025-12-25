@@ -1,0 +1,768 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar Link Styles */
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Navbar Hover Effect */
+.navbar-links a {
+    position: relative;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Underline Animation */
+.navbar-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 3px;
+    background: #65eb2c;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.navbar-links a:hover {
+    color: #65eb2c;  
+    transform: scale(1.1);
+}
+
+.navbar-links a:hover::after {
+    width: 100%;
+}
+
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 20px;
+}
+
+/* Navbar Links */
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+
+.text-center{
+    text-align: center;
+}
+
+.section-title{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.section-lead{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+
+.hero{
+    height: 650px;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/IMAGE/home.jpg');
+    background-size: 100% 120%;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.hero-lead, .hero-title{
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-title{
+    font-size: 65px;
+}
+
+.hero-lead{
+    font-size: 25px;
+}
+
+.hero-btn{
+    background-color: #ffffff;
+    color:#000000;
+    padding:10px;
+    display: inline-block;
+    margin-top:10px;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.hero-btn:hover{
+    background: blue;
+    color: #ffffff;
+}
+
+.about {
+    height: auto; /* Allow flexible height */
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #f7e9ee, #fbeff2); /* Gradient for a softer look */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.about-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+.about-text strong {
+    color: #d63384;
+}
+
+.about-image {
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .about-image img {
+        width: 80%;
+    }
+}
+
+
+.team {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    max-width: 250px;
+    text-align: center;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.team-member h3 {
+    margin: 10px 0 5px;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: gray;
+}
+
+
+.value{
+    background: #f6f8e7;
+    padding: 35px;
+}
+
+.value-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; 
+}
+
+
+.value-card {
+    width: 300px; 
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 8px;
+    margin: 30px 0; 
+    padding: 20px; 
+}
+
+
+.value-card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover;
+    margin-bottom: 20px; 
+}
+
+
+.value-card h3 {
+    font-size: 24px; 
+    margin: 20px 0; 
+}
+
+
+.value-card p {
+    font-size: 16px; 
+    color: #555;
+    padding: 0 20px; 
+    margin-bottom: 20px; 
+}
+
+
+.destinations{
+    padding: 35px;
+}
+
+.destinations-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 35px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.grid-item img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    transition: transform 0.4s ease, opacity 0.4s ease; 
+}
+
+.grid-item {
+    position: relative; 
+    overflow: hidden; 
+}
+
+
+.grid-item:hover img {
+    transform: scale(1.05); 
+    opacity: 0.95;
+    transition: transform 0.4s ease, opacity 0.4s ease; 
+}
+
+.grid-item:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.4s ease; 
+}
+
+.section-title{
+    color:black;
+}
+
+/* Contact Section */
+.contact {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('/IMAGE/pexels-fotoaibe-1571470.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+/* Contact Heading */
+.contact h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Contact Card */
+.contact-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form Labels */
+.contact-card label {
+    font-weight: 600;
+    color: #333;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+/* Input Fields */
+.contact-card input,
+.contact-card textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #1e3c72;
+    border-radius: 8px;
+    background: #f9f9f9;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-card input:focus,
+.contact-card textarea:focus {
+    border-color: #2a5298;
+    background: #fff;
+}
+
+/* Submit Button */
+.btn-primary {
+    width: 100%;
+    background: #1e3c72;
+    border: none;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #2a5298;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .contact h2 {
+        font-size: 26px;
+        padding: 8px 16px;
+    }
+    .contact-card {
+        padding: 20px;
+    }
+    .btn-primary {
+        font-size: 16px;
+    }
+}
+
+.gallery-images img {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+}
+
+/* FAQ Section */
+.faq {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* FAQ Items */
+.faq-item {
+    background: #f8f8f8;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 6px;
+    border-left: 4px solid #007bff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.faq-item:hover {
+    background: #f1f1f1;
+}
+
+.faq-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    position: relative;
+}
+
+/* FAQ Answers */
+.faq-item p {
+    display: none;
+    margin-top: 8px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Button Styling */
+button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .faq {
+        width: 90%;
+    }
+
+    .faq h2 {
+        font-size: 22px;
+    }
+
+    .faq-item h3 {
+        font-size: 16px;
+    }
+
+    .faq-item p {
+        font-size: 14px;
+    }
+
+    button {
+        width: 180px;
+        font-size: 14px;
+    }
+}
+
+
+/* Login Page Background Image */
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/IMAGE/pexels-fotoaibe-1571460.jpg'); Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Container for the Login Form */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-container label {
+    font-weight: bold;
+    color: #333;
+}
+
+.login-container input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.login-container input:focus {
+    border-color: #5b9bd5;
+    outline: none;
+}
+
+.login-container button {
+    padding: 12px;
+    background-color: #5b9bd5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #4a8cc2;
+}
+
+.login-container p {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.login-container a {
+    color: #5b9bd5;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+
+
+@media screen and (max-width:760px) {
+    .about-layout{
+        grid-template-columns: 1fr;
+    }
+
+    .value-flex{
+        flex-direction: column;
+    }
+
+    .destinations-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width:540px) {
+    .navbar{
+        padding-bottom: 30px;
+    }
+
+    .navbar img{
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .navbar-links{
+        margin: auto;
+    }
+
+    .hero-title{
+        font-size: 55px;
+    }
+
+    .hero-lead{
+        font-size: 20px;
+    }
+}
+
+.signup-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('/IMAGE/pexels-fotoaibe-1571460.jpg'); Path to your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.signup-container {
+    background-color: white;
+    padding: 40px;
+    padding-top: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    max-height: fit-content;
+}
+
+.signup-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.signup-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.signup-container label {
+    font-weight: bold;
+    color: #333;
+}
+
+.signup-container input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.signup-container input:focus {
+    border-color: #5b9bd5;
+    outline: none;
+}
+
+.signup-container button {
+    padding: 10px;
+    background-color: #5b9bd5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-container button:hover {
+    background-color: #4a8cc2;
+}
+
+.signup-container p {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.signup-container a {
+    color: #5b9bd5;
+    text-decoration: none;
+}
+
+.signup-container a:hover {
+    text-decoration: underline;
+}
+
+/* Styling for the 'Explore Our Services' button */
+.btn-services {
+    display: inline-block;
+    background-color: white; /* White background for the button */
+    color: black; /* Black color for the text */
+    font-size: 16px; /* Set a readable font size */
+    padding: 15px 30px; /* Add padding to make the button larger */
+    text-align: center; /* Center the text inside the button */
+    text-decoration: none; /* Remove underline from the link */
+    border-radius: 50px; /* Rounded corners */
+    border: 2px solid black; /* Black border */
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Smooth transition for scaling and border color */
+}
+
+.btn-services:hover {
+    transform: scale(1.05); /* Slightly scale up the button on hover */
+    border-color: #FF6F61; /* Change the border color to red on hover */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Footer Sections */
+.footer-section {
+    margin: 5px;
+    min-width: 150px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #f4a261;
+    display: inline-block;
+    padding-bottom: 3px;
+}
+
+/* Social Media Icons */
+.social-icon {
+    font-size: 20px;
+    color: white;
+    margin: 0 8px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #f4a261;
+}
+
+/* Bottom Footer Text */
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.7;
+}

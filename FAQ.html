@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Designers - FAQ</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="./js/script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="./IMAGE/LOGO1.jpg" alt="" width="8%">
+        <ul class="navbar-links">
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./services.html">SERVICES</a></li>
+            <li><a href="./gallery.html">GALLERY</a></li>
+            <li><a href="./FAQ.html">FAQ</a></li>
+            <li><a href="./contact.html">CONTACT US</a></li>
+            <li><a href="./login.html">LOGIN</a></li>
+            <li><a href="#" style="display: none;">LOGOUT</a></li>
+        </ul>
+    </nav>
+
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <h3>What is interior design?</h3>
+            <p>Interior design involves creating functional, aesthetically pleasing spaces by arranging furniture, colors, lighting, and decor to enhance the environment.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>How long does a typical interior design project take?</h3>
+            <p>The duration of a project depends on its complexity. Typically, it could take anywhere from a few weeks to several months.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do you offer free consultations?</h3>
+            <p>Yes! We offer a free initial consultation to discuss your needs, preferences, and ideas.</p>
+        </div>
+
+        <button id="show-more-btn">Show More FAQs</button>
+
+        <div id="more-faqs" style="display: none;">
+            <div class="faq-item">
+                <h3>What are the benefits of hiring an interior designer?</h3>
+                <p>Interior designers bring expertise in space planning, aesthetics, and functionality to create cohesive, stylish, and practical designs.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can you work within my budget?</h3>
+                <p>Yes, we tailor designs based on your budget while ensuring quality and style.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you provide 3D visualizations?</h3>
+                <p>Yes, we offer 3D renderings to help you visualize the final design before implementation.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:info@neospaceinteriordesigners.com">info@neospaceinteriordesigners.com</a></p>
+                <p>Phone: +789 456 7890</p>
+            </div>
+    
+            <div class="footer-section social-media">
+                <h3>Follow Us</h3>
+                <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2025 Interior Designers. All Rights Reserved.</p>
+    </footer>
+    
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Designers - FAQ</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            padding: 20px;
+        }
+        .faq {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+        .faq h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        .faq-item {
+            background-color: #ffffff;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            padding: 15px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .faq-item:hover {
+            background-color: #e6f7ee;
+        }
+        .faq-modal {
+            display: none;
+            position: fixed;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .faq-modal-content {
+            background-color: #fff;
+            width: 90%;
+            max-width: 500px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            transform: scale(0.7);
+            animation: pop-in 0.3s forwards;
+            border-top: 5px solid #4CAF50;
+        }
+        @keyframes pop-in {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .faq-modal h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+        .faq-modal .close {
+            color: #4CAF50;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        .faq-modal .close:hover {
+            color: #ff6347;
+        }
+        .faq-modal p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="./IMAGE/LOGO1.jpg" alt="Logo" width="8%">
+        <ul class="navbar-links">
+            <li><a href="./index.html">HOME</a></li>
+        </ul>
+    </nav>
+
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item" onclick="openFAQModal('What is interior design?', 'Interior design involves creating functional, aesthetically pleasing spaces by arranging furniture, colors, lighting, and decor to enhance the environment.')">
+            <h3>What is interior design?</h3>
+        </div>
+
+        <div class="faq-item" onclick="openFAQModal('Do you offer free consultations?', 'Yes! We offer a free initial consultation to discuss your needs, preferences, and ideas.')">
+            <h3>Do you offer free consultations?</h3>
+        </div>
+
+        <div class="faq-item" onclick="openFAQModal('How long does a typical project take?', 'The duration of a project depends on its complexity. Typically, it could take anywhere from a few weeks to several months.')">
+            <h3>How long does a typical project take?</h3>
+        </div>
+
+        <div class="faq-item" onclick="openFAQModal('Can you work within my budget?', 'Yes, we tailor designs based on your budget while ensuring quality and style.')">
+            <h3>Can you work within my budget?</h3>
+        </div>
+    </section>
+
+    <div id="faqModal" class="faq-modal">
+        <div class="faq-modal-content">
+            <span class="close" onclick="closeFAQModal()">&times;</span>
+            <h3 id="modalQuestion"></h3>
+            <p id="modalAnswer"></p>
+        </div>
+    </div>
+
+    <script>
+        function openFAQModal(question, answer) {
+            document.getElementById("modalQuestion").innerText = question;
+            document.getElementById("modalAnswer").innerText = answer;
+            document.getElementById("faqModal").style.display = "flex";
+        }
+
+        function closeFAQModal() {
+            document.getElementById("faqModal").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target === document.getElementById("faqModal")) {
+                closeFAQModal();
+            }
+        }
+    </script>
+</body>
+</html> -->
